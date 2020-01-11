@@ -7,3 +7,6 @@ echoDecHex: echoDecHex.c
 
 decToBin: decToBin.c
 	$(CC) $(CFLAGS) -o $@ $^
+
+2.16.1: 2.16.1.c
+	$(CC) $(CFLAGS) -o $@ $^
