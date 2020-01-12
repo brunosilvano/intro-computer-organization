@@ -13,3 +13,6 @@ decToBin: decToBin.c
 
 2.16.2: 2.16.2.c
 	$(CC) $(CFLAGS) -o $@ $^
+
+2.16.3: 2.16.3.c
+	$(CC) $(CFLAGS) -o $@ $^
