@@ -21,6 +21,14 @@ int main(void)
   read(STDIN_FILENO, &aChar, 1);
   while (aChar != '\n')
   {
+    if (9 < aChar)
+      aChar += 9;           // offset for chars above 9
+
+    aChar = aChar & 0x0f;   // mask char to extract decimal value
+
+    x = x << 4;             // make room for next digit
+    x += (int)aChar;        // add digit to result
+
     read(STDIN_FILENO, &aChar, 1);
   }
 
